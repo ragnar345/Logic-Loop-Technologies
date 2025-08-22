@@ -1,0 +1,849 @@
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+}
+
+/* Background video */
+#bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+@media(min-aspect-ratio:16/9){
+    #bg-video{
+        width: 100%;
+        height: auto;
+    }
+}
+@media(max-aspect-ratio:16/9){
+    #bg-video{
+        width: auto;
+        height: 100%;
+     }
+    
+
+}
+
+/* Overlay to darken video */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: -1;
+}
+
+
+.navbar {
+  background-color: white;
+  padding: 20px 0;
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0 2vw;
+  min-height: 60px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #76786fbf;
+  
+}
+
+/* Search container always at the left */
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  
+}
+
+/* Hamburger and nav-links default */
+.hamburger {
+  display: none;
+  margin-left: auto;
+}
+.nav-links {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Header Section */
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: black;
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: black;
+}
+
+/* Services Grid */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+/* Apply animation to cards */
+.card {
+  animation: slideInUp 0.8s ease-out;
+  animation-fill-mode: both;
+  /* Optional stagger effect */
+  animation-delay: var(--delay, 0s);
+}
+
+
+/* Card Styling */
+.card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.80);
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Image inside card */
+.service-image {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Card Text */
+.card h2 {
+  font-size: 1.5rem;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: black;
+  margin-bottom: 20px;
+}
+
+/* Button */
+.card button {
+  padding: 10px 20px;
+  background-color: black;
+  color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+  background-color:transparent;
+  color: black;
+}
+
+/* Search Container */
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    
+}
+
+#searchInput {
+    padding: 8px 12px;
+    border: 2px solid black;
+    border-radius: 4px;
+    margin-right: 5px;
+    font-size: 14px;
+    width: 200px;
+    transition: border-color 0.3s ease;
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: transparent
+}
+
+#searchButton {
+    padding: 8px 15px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#searchButton:hover {
+    background-color: white;
+    color: black;
+}
+
+/* FontAwesome icon styling */
+.fa-search {
+    font-size: 14px;
+    color: black;
+    border: white;
+}
+
+/* View More Dropdown Styles */
+.view-more-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 40px 0;
+}
+
+.view-more-btn {
+  background: white;
+  color: black;
+  border: black;
+  border-radius: 25px;
+  padding: 12px 32px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s;
+}
+
+.view-more-btn:hover {
+  background: transparent;
+  color: black;
+}
+
+.dropdown-icon {
+  font-size: 1.3em;
+  display: flex;
+  align-items: center;
+  color: black;
+  background: black;
+}
+
+/* Item Price */
+.item-price {
+  color: black;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin: 8px 0 12px 0;
+}
+
+/* Buy Now Button */
+.buy-now-btn {
+  background: #00b894;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 22px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-bottom: 8px;
+}
+
+.buy-now-btn:hover {
+  background: #009e7a;
+}
+
+/* Footer */
+.footer {
+  padding: 30px;
+  background-color:transparent;
+  font-size: 14px;
+  text-align: center;
+}
+footer p {
+    margin: 10px 0;
+    color: black;
+}
+
+footer a {
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+
+footer a img {
+  filter: invert(0);
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+footer img{
+  color: white;
+}
+
+footer a:hover img {
+    transform: scale(1.2);
+    
+}
+.footer-copy {
+  font-size: 0.95em;
+  color: black;
+  margin-top: 10px;
+}
+
+/* Slideshow Styles */
+.slideshow-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 10px auto;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slideshow {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 18px;
+  z-index: 1;
+}
+
+.slide-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s;
+  z-index: 1;
+}
+
+.slide-img.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.logo-top-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.logo-top {
+  width: 120px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  background: #fff;
+  padding: 10px;
+}
+
+.main-heading {
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.main-heading h1 {
+  color: #222;
+  font-size: 2.1em;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .slideshow-wrapper {
+    height: 170px;
+    max-width: 98vw;
+  }
+  .logo-top {
+    width: 70px;
+    padding: 5px;
+  }
+  .main-heading h1 {
+    font-size: 1.2em;
+    margin-top: 10px;
+  }
+}
+
+/* Responsive Navbar */
+@media (max-width: 900px) {
+  .nav-links {
+    flex-wrap: wrap;
+    font-size: 0.98em;
+  }
+  .nav-links li {
+    margin-right: 10px;
+  }
+  .search-container input {
+    width: 90px;
+  }
+}
+
+/* Responsive Container and Headings */
+@media (max-width: 700px) {
+  .container {
+    padding: 0 5vw;
+  }
+  .main-heading h1,
+  .header h1 {
+    font-size: 1.2em;
+  }
+}
+
+/* Responsive Logo and Slideshow */
+.logo-top-container {
+  margin-top: 18px;
+  margin-bottom: 8px;
+}
+.logo-top {
+  width: 70px;
+  padding: 5px;
+}
+.slideshow-wrapper {
+  height: 150px;
+  max-width: 99vw;
+}
+.slide-img {
+  border-radius: 10px;
+}
+
+/* Responsive Cards/Services */
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+}
+.card {
+  width: 320px;
+  min-width: 0;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+@media (max-width: 600px) {
+  .services {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .card {
+    width: 98vw;
+    max-width: 350px;
+    margin: 0 auto 16px auto;
+  }
+  .service-image {
+    width: 100%;
+    height: auto;
+    max-height: 180px;
+    object-fit: cover;
+  }
+}
+
+/* Responsive View More Button */
+.view-more-container {
+  margin: 18px 0 30px 0;
+}
+.view-more-btn {
+  font-size: 1em;
+  padding: 10px 18px;
+}
+
+/* Responsive Footer */
+.footer {
+  font-size: 0.98em;
+  padding: 22px 2vw 10px 2vw;
+}
+.footer-links,
+.footer-social {
+  flex-direction: column;
+  gap: 6px;
+}
+.footer-social .social-icon {
+  font-size: 1.1em;
+  margin: 0 3px;
+}
+@media (max-width: 500px) {
+  .footer {
+    font-size: 0.93em;
+    padding: 16px 1vw 8px 1vw;
+  }
+  .footer-links a {
+    margin: 0 3px;
+  }
+}
+
+/* Hide horizontal scroll */
+body {
+  overflow-x: hidden;
+}
+
+/* Hamburger styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  margin-left: 10px;
+}
+.hamburger span {
+  display: block;
+  height: 4px;
+  width: 28px;
+  background: black;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Show hamburger and hide nav-links on mobile */
+@media (max-width: 700px) {
+  .hamburger {
+    display: flex;
+    position: absolute;
+    top: 18px;
+    left: 18px;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100vw;
+    padding: 30px 0 20px 0;
+    gap: 24px;
+    z-index: 1000;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    animation: slideDown 0.3s;
+    padding-left: 40px;
+  }
+  .nav
+    display: flex;
+  }
+}
+@keyframes slideDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* --- Search Container Desktop --- */
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  position: relative;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+.search-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #00b894;
+  font-size: 1.5em;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* --- Responsive: Mobile --- */
+@media (max-width: 700px) {
+  .search-container {
+    order: 3;
+    margin-left: 0;
+    margin-right: 0;
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    z-index: 1100;
+  }
+  .search-form {
+    display: none;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    position: absolute;
+    right: 0;
+    top: 36px;
+    padding: 6px 8px;
+    z-index: 1101;
+  }
+  .search-form.active {
+    display: flex;
+  }
+  .search-toggle {
+    display: block;
+  }
+  /* Hide the desktop search input/button on mobile */
+  #searchInput {
+    width: 120px;
+    font-size: 1em;
+  }
+}
+
+/* Optional: Hide search form on desktop if not needed */
+@media (min-width: 701px) {
+  .search-toggle {
+    display: none;
+  }
+  .search-form {
+    display: flex !important;
+    position: static;
+    box-shadow: none;
+    background: none;
+    padding: 0;
+  }
+}
+
+/* Add this to your get started.css file */
+
+.best-deals-offers {
+  margin: 40px auto 0 auto;
+  padding: 30px 0;
+  background: #f8fafc;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+}
+
+.best-deals-offers .header h1 {
+  color: #e53935;
+  margin-bottom: 10px;
+}
+
+.deal-card {
+  border: 2px solid #e53935;
+  position: relative;
+}
+
+.deal-badge {
+  background: #e53935;
+  color: #fff;
+  font-size: 0.8em;
+  padding: 2px 8px;
+  border-radius: 8px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.deal-price {
+  color: #388e3c;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.deal-card del {
+  color: #888;
+  font-size: 0.95em;
+  margin-left: 6px;
+}
+
+.theme-toggle-btn {
+  position: fixed;
+  top: 100px;
+  right: 28px;
+  z-index: 1002;
+  background: #fff;
+  color: #222;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3em;
+  box-shadow: 0 2px 8px #4f8cff11;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.theme-toggle-btn.dark {
+  background: #111;
+  color: #fff;
+  box-shadow: none;
+}
+
+/* --- Dark Theme Styles --- */
+body.dark-mode {
+  background: #000 !important;
+  color: #fff !important;
+}
+body.theme-toggle-btn{
+  background: #fff !important;
+  color: #222 !important;
+}
+
+body.dark-mode .navbar,
+body.dark-mode .header,
+body.dark-mode .card,
+body.dark-mode .footer,
+body.dark-mode .container,
+body.dark-mode .main-heading,
+body.dark-mode .view-more-container{
+  background: #000 !important;
+  color: #fff !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+body.dark-mode .main-heading h1,
+body.dark-mode .header h1,
+body.dark-mode .footer-copy,
+body.dark-mode .footer-links a,
+body.dark-mode .footer-social,
+body.dark-mode .footer a,
+body.dark-mode .deal-badge,
+body.dark-mode .deal-price,
+body.dark-mode .item-price,
+body.dark-mode .buy-now-btn,
+body.dark-mode .nav-links a,
+body.dark-mode .view-more-btn,
+body.dark-mode .service-image,
+body.dark-mode .card h2,
+body.dark-mode .card p {
+  color: #fff !important;
+  border: none !important;
+  background: black !important;
+}
+
+body.dark-mode .logo-top,
+body.dark-mode .logo-top-container img {
+  filter: brightness(0) invert(1);
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.dark-mode .theme-toggle-btn {
+  background: #111;
+  color: #fff;
+  border: none;
+}
+
+body.dark-mode .buy-now-btn,
+body.dark-mode .view-more-btn {
+  background: #222 !important;
+  color: #fff !important;
+  border: none !important;
+}
+
+body.dark-mode .buy-now-btn:hover,
+body.dark-mode .view-more-btn:hover {
+  background: #333 !important;
+  color: #fff !important;
+}
+
+body.dark-mode .search-container input,
+body.dark-mode #searchInput,
+body.dark-mode #searchButton {
+  background: #222 !important;
+  color: #fff !important;
+  border: none !important;
+}
+
+body.dark-mode .fa-search {
+  color: #fff !important;
+}
+
+body.dark-mode .footer a img {
+  filter: brightness(2) invert(1);
+}
+
+/* Remove white borders from headings and texts */
+.main-heading h1,
+.header h1,
+.card h2,
+.card p,
+.footer-copy,
+.footer-links a,
+.footer-social,
+.deal-badge,
+.deal-price,
+.item-price,
+.buy-now-btn,
+.nav-links a,
+.view-more-btn {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* --- End Theme Toggle & Dark Mode --- */

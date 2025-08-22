@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us - Logic Loop Technologies</title>
+  <link rel="stylesheet" href="contact.css" />
+  <link rel="icon"href="IMAGES/icon (2).png"type="image/x-icon">
+</head>
+<body>
+  <script src="Contact.js"></script>
+ <header class="navbar">
+    <nav>
+      <ul class="nav-links">
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <div class="overlay"></div>
+  <div class="container">
+    <!-- your content here -->
+  </div>
+
+  <div class="container">
+    <h1>Contact Us</h1>
+
+    <div class="info">
+      <p><strong>Company:</strong> Logic Loop Technologies</p>
+      <p><strong>Address:</strong> Kigali,Rwanda,Nyarugenge KN 545st</p>
+      <p><strong>Email:</strong> contact@logiclooptech.com</p>
+      <p><strong>Phone:</strong> +250793415218</p>
+    </div>
+
+    <div class="form-container">
+      <form action="https://formspree.io/f/xpwdborv" method="POST">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <div class="map">
+      <h2>Our Location</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!4v1746952533752!6m8!1m7!1sUgmHhOcm8FTFOcPKs5np7Q!2m2!1d-1.993147925302053!2d30.10359690832169!3f133.82584!4f0!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+  <footer class="footer">
+    
+    <p>&copy; 2025 Logic Loop Technologies. All rights reserved.</p>
+
+  </footer>
+</body>
+</html>

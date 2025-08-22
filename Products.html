@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products - Logic Loop Technologies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="products.css" />
+</head>
+<body>
+    <header class="navbar">
+        <nav>
+            <ul class="nav-links">
+                <!-- Logo on the top left -->
+                <li class="logo-nav">
+                    <a href="Get started.html">
+                        <img src="images/logo.png" alt="Logic Loop Technologies Logo" class="navbar-logo" />
+                    </a>
+                </li>
+                <li><a href="Get started.html">Home</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="Products.html">Products</a></li>
+                <li><a href="Cart.html">Cart <span class="cart-count">0</span></a></li>
+                <li class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search products..." aria-label="Search products">
+                    <button type="button" id="searchButton" aria-label="Search">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                </li>
+                <!-- Dark/Light Mode Toggle -->
+                <li>
+                    <button id="themeToggle" aria-label="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="products-container">
+        <aside class="filters">
+            <h3>Filter Products</h3>
+            <div class="filter-section">
+                <h4>Categories</h4>
+                <label><input type="checkbox" value="software"> Software Solutions</label>
+                <label><input type="checkbox" value="services"> IT Services</label>
+                <label><input type="checkbox" value="phones"> Phones</label>
+                <label><input type="checkbox" value="computers"> Computers</label>
+                <label><input type="checkbox" value="audio production"> Audio Production</label>
+                <label><input type="checkbox" value="computer Accessories"> Computer Accessories</label>
+            </div>
+            <div class="filter-section">
+                <h4>Price Range</h4>
+                <input type="range" id="priceRange" min="0" max="5000" value="1000">
+                <div class="price-labels">
+                    <span>$0</span>
+                    <span id="priceValue">$1000</span>
+                </div>
+            </div>
+            <div id="sidebarLoginContainer" class="sidebar-login-container">
+              <button id="sidebarLoginBtn" class="sidebar-login-btn">Login</button>
+            </div>
+            <div id="sidebarProfileBox" class="sidebar-profile-box" style="display:none;">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profile" class="sidebar-profile-pic" id="sidebarProfilePic">
+              <div>
+                <h3 id="sidebarProfileName"></h3>
+                <span class="sidebar-profile-role">Customer</span>
+                <button id="sidebarLogoutBtn" class="sidebar-logout-btn">Logout</button>
+              </div>
+            </div>
+        </aside>
+        <section class="products-grid" id="productsGrid">
+            <!-- Products will be dynamically added here -->
+        </section>
+    </main>
+
+    <footer class="footer">
+    <p>&copy; 2025 Logic Loop Technologies. All rights reserved.</p>
+    <p>Follow us on:</p>
+  <a href="https://facebook.com" target="_blank">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook">Facebook
+  </a>
+  <a href="https://twitter.com" target="_blank">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter">Twitter
+  </a>
+  <a href="https://www.instagram.com/tobby_s.m.i.t.h/" target="_blank">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram">Instagram
+  </a>
+  <a href="https://wa.me/+250790645696/" target="_blank">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="Whatsapp">Whatsapp
+  </a>
+  <a href="https://youtube.com/@logicloop-y3j?si=zbo7iWs-y-5nUXDw" target="_blank">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="Youtube">Youtube
+  </a>
+</footer>
+
+    <script src="products.js"></script>
+    <!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+</body>
+</html>

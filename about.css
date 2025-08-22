@@ -1,0 +1,99 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.8;
+  text-align: center;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a.active {
+  color: #76786fbf;
+}
+
+/* Header */
+.header {
+  padding: 30px 20px;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-size: 16px;
+}
+
+.logo-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.logo-area h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo-area span {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 3px;
+  margin-top: 5px;
+}
+
+/* About Section */
+.about {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.about h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color:white;
+}
+
+.about p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.about ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about ul li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+  padding: 30px;
+  background-color: #111;
+  font-size: 14px;
+}

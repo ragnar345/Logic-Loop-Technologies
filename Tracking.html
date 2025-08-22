@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Your Product</title>
+    <link rel="stylesheet" href="tracking.css">
+</head>
+<body>
+    <header class="navbar">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="Products.html">Products</a></li>
+                <li><a href="Cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="tracking-container">
+        <h1>Track Your Product</h1>
+        <form id="trackingForm">
+            <div class="form-group">
+                <label for="trackingNumber">Enter Tracking Number:</label>
+                <input type="text" id="trackingNumber" name="trackingNumber" required>
+            </div>
+            <button type="submit">Track</button>
+        </form>
+        <div id="trackingResult"></div>
+    </main>
+
+    <script src="tracking.js"></script>
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Logic Loop Technologies</title>
+  <link rel="stylesheet" href="get started.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <script src="Get started.js"></script>
+
+ <header class="navbar">
+    <nav>
+      <div class="search-container" id="searchContainer">
+        <button type="button" id="searchToggle" class="search-toggle" aria-label="Open search">
+          <i class="fas fa-search"></i>
+        </button>
+        <form id="searchForm" class="search-form">
+          <input type="text" id="searchInput" placeholder="Search...">
+          <button type="submit" id="searchButton">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Products.html">Products</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="Cart.html">Cart</a></li>
+      </ul>
+    </nav>
+</header>
+
+  <div class="container">
+    <div class="logo-top-container">
+      <img src="IMAGES/logo.png" alt="Logic Loop Technologies Logo" class="logo-top"/>
+    </div>
+    <div class="slideshow-wrapper">
+      <div class="slideshow" id="slideshow">
+        <img src="IMAGES/laptop 1.jpeg" alt="Product 1" class="slide-img active">
+        <img src="IMAGES/laptop 2.avif" alt="Product 2" class="slide-img">
+        <img src="IMAGES/laptop 3.jpeg" alt="Product 3" class="slide-img">
+        <img src="IMAGES/phone 1.jpg" alt="Product 4" class="slide-img">
+        <!-- Add more images as needed -->
+      </div>
+    </div>
+    <div class="main-heading">
+      <h1>Electronic Products</h1>
+    </div>
+
+    <section class="services">
+      <div class="card">
+        <img src="IMAGES/laptop 1.jpeg" alt="Electronic Products" class="service-image" />
+        <h2>HP Elite Book</h2>
+        <p>Hp Elite Book 8th generation intel i7 16 GB RAM and 512 SSD Storage.</p>
+        <div class="item-price">$850.00</div>
+        <button class="buy-now-btn"
+          data-name="HP Elite Book"
+          data-price="850"
+          data-image="IMAGES/laptop 1.jpeg">
+          Buy Now
+        </button>
+      </div>
+
+      <div class="card">
+        <img src="IMAGES/laptop 2.avif" alt="Web Development" class="service-image" />
+        <h2>Hp Envy x360</h2>
+        <p>Hp Envy Intel i7-1355U, 16GB RAM, 1TB SSD, 
+          Backlit Keyboard, 5MP Camera, Fingerprint.
+        </p>
+        <div class="item-price">$1,200.00</div>
+        <button class="buy-now-btn"
+          data-name="Hp Envy x360"
+          data-price="1200"
+          data-image="IMAGES/laptop 2.avif">
+          Buy Now
+        </button>
+      </div>
+
+      <div class="card">
+        <img src="IMAGES/laptop 3.jpeg" alt="Video Production" class="service-image" />
+        <h2>Hp Gaming Laptop</h2>
+        <p>Hp Pavillion 15,Intel core i7-10750H
+          32GB RAM ,1TB SSD Storage.</p>
+        <div class="item-price">$1,500.00</div>
+        <button class="buy-now-btn"
+          data-name="Hp Gaming Laptop"
+          data-price="1500"
+          data-image="IMAGES/laptop 3.jpeg">
+          Buy Now
+        </button>
+      </div>
+
+      <div class="card">
+        <img src="IMAGES/phone 1.jpg" alt="Iphone 16" class="service-image" />
+        <h2>Apple iPhone 16 pro max</h2>
+        <p>Apple iPhone 16 Pro Max, US Version, 256GB Storage.</p>
+        <div class="item-price">$1,800.00</div>
+        <button class="buy-now-btn"
+          data-name="Apple iPhone 16 pro max"
+          data-price="1800"
+          data-image="IMAGES/phone 1.jpg">
+          Buy Now
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <div class="container">
+    <header class="header">
+      <h1>Web Development Services</h1>
+      <p>
+      </p>
+    </header>
+
+    <section class="services">
+      <div class="card">
+        <img src="IMAGES/web 1.avif" alt="Web Building" class="service-image" />
+        <h2>Web Building</h2>
+        <p>Hp Elite Book 8th generation intel i7
+        16 GB RAM and 512 SSD Storage.</p>
+        <div class="item-price">$850.00</div>
+        <button class="buy-now-btn"
+          data-name="Web Building"
+          data-price="850"
+          data-image="IMAGES/web 1.avif">
+          Buy Now
+        </button>
+      </div>
+  
+      <div class="card">
+        <img src="IMAGES/web 2.jpeg" alt="Mobile App Development" class="service-image" />
+        <h2>Mobile App Development</h2>
+        <p>Hp Envy Intel i7-1355U, 16GB RAM, 1TB SSD, 
+          Backlit Keyboard, 5MP Camera, Fingerprint.
+        </p>
+        <div class="item-price">$1,200.00</div>
+        <button class="buy-now-btn"
+          data-name="Mobile App Development"
+          data-price="1200"
+          data-image="IMAGES/web 2.jpeg">
+          Buy Now
+        </button>
+      </div>
+
+      <div class="card">
+        <img src="IMAGES/web 3.jpeg" alt="Software development" class="service-image" />
+        <h2>Software development</h2>
+        <p>Hp Pavillion 15,Intel core i7-10750H
+          32GB RAM ,1TB SSD Storage.</p>
+        <div class="item-price">$1,500.00</div>
+        <button class="buy-now-btn"
+          data-name="Software development"
+          data-price="1500"
+          data-image="IMAGES/web 3.jpeg">
+          Buy Now
+        </button>
+      </div>
+    </section>
+  </div>
+  <div class="container">
+    <header class="header">
+      <h1>Audio Production Services</h1>
+      <p>
+      </p>
+    </header>
+
+    <section class="services">
+      <div class="card">
+        <img src="IMAGES/web 1.avif" alt="Beat making" class="service-image" />
+        <h2>Beat making</h2>
+        <p>Hp Elite Book 8th generation intel i7
+        16 GB RAM and 512 SSD Storage.</p>
+        <div class="item-price">$850.00</div>
+        <button class="buy-now-btn"
+          data-name="Beat making"
+          data-price="850"
+          data-image="IMAGES/web 1.avif">
+          Buy Now
+        </button>
+      </div>
+  
+      <div class="card">
+        <img src="IMAGES/web 2.jpeg" alt="Mixing and Mastering" class="service-image" />
+        <h2>Mixing and Mastering</h2>
+        <p>Hp Envy Intel i7-1355U, 16GB RAM, 1TB SSD, 
+          Backlit Keyboard, 5MP Camera, Fingerprint.
+        </p>
+        <div class="item-price">$1,200.00</div>
+        <button class="buy-now-btn"
+          data-name="Mixing and Mastering"
+          data-price="1200"
+          data-image="IMAGES/web 2.jpeg">
+          Buy Now
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <!-- View More Dropdown Icon -->
+  <div class="view-more-container">
+    <button id="viewMoreBtn" class="view-more-btn">
+      View More
+      <span class="dropdown-icon"><i class="fas fa-chevron-down"></i></span>
+    </button>
+  </div>
+
+  <div class="container best-deals-offers">
+    <header class="header">
+      <h1>Best Deals & Special Offers</h1>
+      <p>Grab our exclusive deals and limited-time offers!</p>
+    </header>
+    <section class="services">
+      <div class="card deal-card">
+        <img src="IMAGES/laptop 1.jpeg" alt="HP Elite Book Deal" class="service-image" />
+        <h2>HP Elite Book <span class="deal-badge">20% OFF</span></h2>
+        <p>Now only <span class="deal-price">$680.00</span> <del>$850.00</del></p>
+        <button class="buy-now-btn"
+          data-name="HP Elite Book (Deal)"
+          data-price="680"
+          data-image="IMAGES/laptop 1.jpeg">
+          Buy Now
+        </button>
+      </div>
+      <div class="card deal-card">
+        <img src="IMAGES/phone 1.jpg" alt="iPhone 16 Pro Max Offer" class="service-image" />
+        <h2>iPhone 16 Pro Max <span class="deal-badge">Special!</span></h2>
+        <p>Special offer: <span class="deal-price">$1,199.00</span> <del>$1,399.00</del></p>
+        <button class="buy-now-btn"
+          data-name="iPhone 16 Pro Max (Special)"
+          data-price="1399"
+          data-image="IMAGES/phone 1.jpg">
+          Buy Now
+        </button>
+      </div>
+      <div class="card deal-card">
+        <img src="IMAGES/web 2.jpeg" alt="Mobile App Dev Discount" class="service-image" />
+        <h2>Mobile App Development <span class="deal-badge">15% OFF</span></h2>
+        <p>Now <span class="deal-price">$1,020.00</span> <del>$1,200.00</del></p>
+        <button class="buy-now-btn"
+          data-name="Mobile App Development (Deal)"
+          data-price="1020"
+          data-image="IMAGES/web 2.jpeg">
+          Buy Now
+        </button>
+      </div>
+    </section>
+  </div>
+  <!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-links">
+    <a href="terms.html" target="_blank">Terms &amp; Conditions</a>
+    <span>|</span>
+    <a href="privacy.html" target="_blank">Privacy Policy</a>
+  </div>
+  <div class="footer-social">
+    <span>Follow us:</span>
+    <a href="https://facebook.com" target="_blank">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook">Facebook
+  </a>
+  <a href="https://twitter.com" target="_blank">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter">Twitter
+  </a>
+  <a href="https://www.instagram.com/tobby_s.m.i.t.h/" target="_blank">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram">Instagram
+  </a>
+  <a href="https://wa.me/+250790645696/" target="_blank">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="Whatsapp">Whatsapp
+  </a>
+  <a href="https://youtube.com/@logicloop-y3j?si=zbo7iWs-y-5nUXDw" target="_blank">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="Youtube">Youtube
+  </a>
+  <div class="footer-copy">
+    &copy; 2025 Logic Loop Technologies. All rights reserved.
+  </div>
+</footer>
+<button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle dark/light mode">
+  <i class="fas fa-moon"></i>
+</button>
+</body>
+</html>
